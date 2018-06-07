@@ -1,12 +1,14 @@
 # VideoPlayer
 android 视频播放框架  支持小窗口  recycleview列表  缓存，全屏播放，切换清晰度等
-# 一 引用
+## 一 引用
+</br>
   allprojects {
     repositories {
       ...
       maven { url 'https://jitpack.io' }
     }
 }
+</br>
 在你的moudle下得build.gradle引用
 dependencies {
 implementation 'com.github.lkxiaojian:VideoPlayer:1.0'
@@ -16,7 +18,7 @@ implementation 'com.github.lkxiaojian:VideoPlayer:1.0'
             android:name=".RecycleViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
-   # 二 使用
+   ## 二 使用
   
   引用自定义布局
       <com.lk.playvideolibrary.NiceVideoPlayer
