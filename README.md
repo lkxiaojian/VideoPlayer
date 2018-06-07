@@ -5,15 +5,15 @@ android 视频播放框架  支持小窗口  recycleview列表  缓存，全屏�
 `  allprojects {
     repositories {
       ...
-      maven { url 'https://jitpack.io'</br>
+      maven { url 'https://jitpack.io'
       }
     }
 }`
 
-在你的moudle下得build.gradle引用</br>
-`dependencies {</br>
-implementation 'com.github.lkxiaojian:VideoPlayer:1.0'</br>
-}</br>`
+在你的moudle下得build.gradle引用
+`dependencies {
+implementation 'com.github.lkxiaojian:VideoPlayer:1.0'
+}`
 在对应的Activity视频界面的AndroidManifest.xml中添加
 
 ``android:configChanges="orientation|keyboardHidden|screenSize"``
