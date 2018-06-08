@@ -59,7 +59,6 @@ public class SmallPlayerActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onBackPressed() {
         if (NiceVideoPlayerManager.instance().onBackPressd()) return;
-        
         super.onBackPressed();
     }
 

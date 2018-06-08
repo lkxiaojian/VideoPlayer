@@ -645,7 +645,6 @@ public final class R {
         public static final int select_change_clarity = 0x7f06009b;
         public static final int tooltip_frame_dark = 0x7f06009c;
         public static final int tooltip_frame_light = 0x7f06009d;
-        public static final int videobag = 0x7f06009e;
     }
     public static final class id {
         public static final int action0 = 0x7f070006;
