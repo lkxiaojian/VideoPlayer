@@ -626,6 +626,7 @@ int drawable seek_thumb_pressed 0x7f06009a
 int drawable select_change_clarity 0x7f06009b
 int drawable tooltip_frame_dark 0x7f06009c
 int drawable tooltip_frame_light 0x7f06009d
+int drawable videobag 0x7f06009e
 int id ALT 0x7f070000
 int id CTRL 0x7f070001
 int id FUNCTION 0x7f070002
