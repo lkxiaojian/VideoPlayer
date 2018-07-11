@@ -584,7 +584,7 @@ public class TxVideoPlayerController
      *
      * @param onStartClickListener
      */
-    public void setShareClickListener(OnStartClickListener onStartClickListener, Object value) {
+    public void setStartClickListener(OnStartClickListener onStartClickListener, Object value) {
         this.mOnStartClickListener = onStartClickListener;
         this.value = value;
     }
