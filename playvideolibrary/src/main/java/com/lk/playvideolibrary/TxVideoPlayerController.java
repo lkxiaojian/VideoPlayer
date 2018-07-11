@@ -84,6 +84,8 @@ public class TxVideoPlayerController
     private boolean hasRegisterBatteryReceiver; // 是否已经注册了电池广播
     public OnShareClickListener mOnShareClickListener;
     private boolean LengthShow = true;
+    public OnStartClickListener mOnStartClickListener;
+    private Object value;//开始监听 的传过来的 值
 
     public TxVideoPlayerController(Context context) {
         super(context);
@@ -360,6 +362,11 @@ public class TxVideoPlayerController
         if (v == mCenterStart) {
             if (mNiceVideoPlayer.isIdle()) {
                 mNiceVideoPlayer.start();
+                if (mOnStartClickListener != null) {
+                    mOnStartClickListener.onStartClick(value);
+                }
+
+
             }
         } else if (v == mBack) {
             if (mNiceVideoPlayer.isFullScreen()) {
@@ -570,5 +577,20 @@ public class TxVideoPlayerController
 
     public interface OnShareClickListener {
         void onShareClick();
+    }
+
+    /**
+     * 设置播放监听
+     *
+     * @param onStartClickListener
+     */
+    public void setShareClickListener(OnStartClickListener onStartClickListener, Object value) {
+        this.mOnStartClickListener = onStartClickListener;
+        this.value = value;
+    }
+
+
+    public interface OnStartClickListener {
+        void onStartClick(Object value);
     }
 }
