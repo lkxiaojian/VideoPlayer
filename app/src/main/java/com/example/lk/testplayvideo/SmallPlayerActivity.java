@@ -29,7 +29,8 @@ public class SmallPlayerActivity extends AppCompatActivity implements View.OnCli
         mNiceVideoPlayer.setUp(videoUrl, null);
         TxVideoPlayerController controller = new TxVideoPlayerController(this);
         controller.setShareClickListener(this);
-        controller.setVisible(View.VISIBLE);
+        controller.setVisible(View.VISIBLE);//设置播放完成后，分享是否显示
+        controller.setVisibleLength(true);//设置封面右下角时间是否显示  true  显示，false 不显示  默认是显示的
         controller.setTitle("哈哈，我是标题");
         controller.setLenght(98000);
         Glide.with(this)
