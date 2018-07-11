@@ -83,6 +83,7 @@ public class TxVideoPlayerController
 
     private boolean hasRegisterBatteryReceiver; // 是否已经注册了电池广播
     public OnShareClickListener mOnShareClickListener;
+    private boolean LengthShow = true;
 
     public TxVideoPlayerController(Context context) {
         super(context);
@@ -111,7 +112,6 @@ public class TxVideoPlayerController
         mFullScreen = findViewById(R.id.full_screen);
         mClarity = findViewById(R.id.clarity);
         mLength = findViewById(R.id.length);
-
         mLoading = findViewById(R.id.loading);
         mLoadText = findViewById(R.id.load_text);
 
@@ -336,8 +336,12 @@ public class TxVideoPlayerController
 
         mBottom.setVisibility(View.GONE);
         mFullScreen.setImageResource(R.drawable.ic_player_enlarge);
+        if (LengthShow) {
+            mLength.setVisibility(View.VISIBLE);
+        } else {
+            mLength.setVisibility(View.GONE);
+        }
 
-        mLength.setVisibility(View.VISIBLE);
 
         mTop.setVisibility(View.VISIBLE);
         mBack.setVisibility(View.GONE);
@@ -541,6 +545,18 @@ public class TxVideoPlayerController
      */
     public void setVisible(int visible) {
         mShare.setVisibility(visible);
+    }
+
+
+    /**
+     * 设置右下角时间是否显示
+     */
+    public void setVisibleLength(boolean isflag) {
+        LengthShow = isflag;
+        if (!LengthShow) {
+            mLength.setVisibility(GONE);
+        }
+
     }
 
     /**
