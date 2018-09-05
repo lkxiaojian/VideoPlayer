@@ -15,7 +15,7 @@ android 视频播放框架  支持小窗口  recycleview列表  缓存，全屏�
 在你的moudle下得build.gradle引用
 
 `dependencies {
-implementation 'com.github.lkxiaojian:VideoPlayer:1.1.2'
+implementation 'com.github.lkxiaojian:VideoPlayer:1.1.3'
 }`
 
 在对应的Activity视频界面的AndroidManifest.xml中添加
