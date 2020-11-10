@@ -1,13 +1,16 @@
 package com.lk.playvideolibrary;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.ContextThemeWrapper;
+
 import android.util.TypedValue;
 import android.view.WindowManager;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.ContextThemeWrapper;
 
 import java.util.Formatter;
 import java.util.Locale;
@@ -49,6 +52,7 @@ public class NiceUtil {
         return null;
     }
 
+    @SuppressLint("RestrictedApi")
     public static void showActionBar(Context context) {
         ActionBar ab = getAppCompActivity(context).getSupportActionBar();
         if (ab != null) {
@@ -60,6 +64,7 @@ public class NiceUtil {
                 .clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
+    @SuppressLint("RestrictedApi")
     public static void hideActionBar(Context context) {
         ActionBar ab = getAppCompActivity(context).getSupportActionBar();
         if (ab != null) {

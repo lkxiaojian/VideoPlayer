@@ -1,8 +1,9 @@
 package com.example.lk.testplayvideo;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.lk.testplayvideo.bean.Video;
@@ -37,8 +38,7 @@ public class VideoViewHolder extends RecyclerView.ViewHolder {
         Glide.with(itemView.getContext())
                 .load(video.getImageUrl())
                 .placeholder(R.drawable.videobag)
-                .crossFade()
-                .into(mController.imageView());
+                       .into(mController.imageView());
         mVideoPlayer.setUp(video.getVideoUrl(), null);
     }
 }

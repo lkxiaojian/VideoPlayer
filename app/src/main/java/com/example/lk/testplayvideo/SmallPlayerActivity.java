@@ -1,10 +1,11 @@
 package com.example.lk.testplayvideo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.lk.playvideolibrary.NiceVideoPlayer;
@@ -36,7 +37,6 @@ public class SmallPlayerActivity extends AppCompatActivity implements View.OnCli
         Glide.with(this)
                 .load("http://img.kaiyanapp.com/1db100be73feffd81178b98fb124ed7d.jpeg?imageMogr2/quality/60/format/jpg")
                 .placeholder(R.drawable.videobag)
-                .crossFade()
                 .into(controller.imageView());
         mNiceVideoPlayer.setController(controller);
     }

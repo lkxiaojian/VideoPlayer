@@ -1,12 +1,13 @@
 package com.lk.playvideolibrary;
 
 import android.content.Context;
-import android.support.annotation.DrawableRes;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+
+import androidx.annotation.DrawableRes;
 
 import java.util.Timer;
 import java.util.TimerTask;

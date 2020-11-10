@@ -1,7 +1,8 @@
 package com.example.lk.testplayvideo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.lk.playvideolibrary.Clarity;
@@ -33,7 +34,6 @@ public class SwitchActivity extends AppCompatActivity {
         Glide.with(this)
                 .load("http://img.kaiyanapp.com/80b78dde7ca3964b4c3edb969f5b5e28.png?imageMogr2/quality/60/format/jpg")
                 .placeholder(R.drawable.videobag)
-                .crossFade()
                 .into(controller.imageView());
         niceVideoPlayer.setController(controller);
     }

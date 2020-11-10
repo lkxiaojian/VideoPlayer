@@ -1,13 +1,12 @@
 package com.lk.playvideolibrary;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.SurfaceTexture;
 import android.media.AudioManager;
 import android.net.Uri;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.Surface;
@@ -384,7 +383,7 @@ public class NiceVideoPlayer extends FrameLayout
         mContainer.addView(mTextureView, 0, params);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    @SuppressLint("NewApi")
     @Override
     public void onSurfaceTextureAvailable(SurfaceTexture surfaceTexture, int width, int height) {
         if (mSurfaceTexture == null) {
