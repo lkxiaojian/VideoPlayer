@@ -32,7 +32,7 @@ public class NiceVideoPlayerManager {
     }
 
     public void suspendNiceVideoPlayer() {
-        if (mVideoPlayer != null && (mVideoPlayer.isPlaying() || mVideoPlayer.isBufferingPlaying())) {
+        if ((mVideoPlayer != null) && (mVideoPlayer.isPlaying() || mVideoPlayer.isBufferingPlaying())) {
             mVideoPlayer.pause();
         }
     }

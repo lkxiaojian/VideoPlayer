@@ -201,6 +201,8 @@ public class NiceVideoPlayer extends FrameLayout
             mController.onPlayStateChanged(mCurrentState);
             LogUtil.d("STATE_BUFFERING_PLAYING");
         } else if (mCurrentState == STATE_COMPLETED || mCurrentState == STATE_ERROR) {
+            //点击重新开始重头播放，不从缓存中取
+            NiceUtil.savePlayPosition(mContext,mUrl,0);
             mMediaPlayer.reset();
             openMediaPlayer();
         } else {
@@ -562,7 +564,7 @@ public class NiceVideoPlayer extends FrameLayout
         if (mCurrentMode == MODE_TINY_WINDOW) {
             contentView.removeView(mContainer);
         } else {
-            this.removeView(mContainer);
+          removeView(mContainer);
         }
         LayoutParams params = new LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
@@ -594,7 +596,7 @@ public class NiceVideoPlayer extends FrameLayout
             LayoutParams params = new LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.MATCH_PARENT);
-            this.addView(mContainer, params);
+            addView(mContainer, params);
 
             mCurrentMode = MODE_NORMAL;
             mController.onPlayModeChanged(mCurrentMode);
@@ -610,7 +612,7 @@ public class NiceVideoPlayer extends FrameLayout
     @Override
     public void enterTinyWindow() {
         if (mCurrentMode == MODE_TINY_WINDOW) return;
-        this.removeView(mContainer);
+         removeView(mContainer);
 
         ViewGroup contentView = (ViewGroup) NiceUtil.scanForActivity(mContext)
                 .findViewById(android.R.id.content);
@@ -621,9 +623,7 @@ public class NiceVideoPlayer extends FrameLayout
         params.gravity = Gravity.BOTTOM | Gravity.END;
         params.rightMargin = NiceUtil.dp2px(mContext, 8f);
         params.bottomMargin = NiceUtil.dp2px(mContext, 8f);
-
         contentView.addView(mContainer, params);
-
         mCurrentMode = MODE_TINY_WINDOW;
         mController.onPlayModeChanged(mCurrentMode);
         LogUtil.d("MODE_TINY_WINDOW");
@@ -641,7 +641,7 @@ public class NiceVideoPlayer extends FrameLayout
             LayoutParams params = new LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.MATCH_PARENT);
-            this.addView(mContainer, params);
+             addView(mContainer, params);
 
             mCurrentMode = MODE_NORMAL;
             mController.onPlayModeChanged(mCurrentMode);

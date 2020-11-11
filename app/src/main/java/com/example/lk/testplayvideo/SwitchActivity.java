@@ -1,7 +1,6 @@
 package com.example.lk.testplayvideo;
 
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
@@ -23,9 +22,7 @@ public class SwitchActivity extends AppCompatActivity {
         initView();
         initdata();
     }
-
     private void initdata() {
-
         niceVideoPlayer.setPlayerType(NiceVideoPlayer.TYPE_IJK); // IjkPlayer or MediaPlayer
         TxVideoPlayerController controller = new TxVideoPlayerController(this);
         controller.setTitle("Beautiful China...");
