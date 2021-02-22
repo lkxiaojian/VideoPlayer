@@ -71,9 +71,6 @@ implementation 'com.github.lkxiaojian:VideoPlayer:1.1.3'
     # 视频播放器
 ``` haml
 -keep class com.lk.playvideolibrary.** { *;}
--keep class tv.danmaku.ijk.media.player.** {*;}
--keep class tv.danmaku.ijk.media.player.IjkMediaPlayer{*;}
--keep class tv.danmaku.ijk.media.player.ffmpeg.FFmpegApi{*;}
 ```
 
     
